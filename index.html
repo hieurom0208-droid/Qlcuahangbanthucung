@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+  <title>Web Bán Pet – Sản phẩm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div>WEB BÁN PET</div>
+  <div class="url">https://www.webbanpet.com</div>
+</div>
+
+<header>
+  <div class="logo">
+    <div class="badge">LOGO</div>
+    <div>
+      <div style="font-weight:700">WebBanPet</div>
+      <div style="font-size:12px;color:#777">Chợ thú cưng online</div>
+    </div>
+  </div>
+
+  <div class="search">
+    <input id="searchInput" type="search" placeholder="Tìm kiếm trên Chợ Pet?...">
+  </div>
+
+  <nav class="nav-actions">
+    <button>Tin tức</button>
+    <button>Đăng tin</button>
+    <button class="primary">Đăng nhập</button>
+  </nav>
+</header>
+
+<main>
+  <div class="controls">
+    <div class="left">
+      <select id="filterType">
+        <option value="">Tất cả loại</option>
+        <option value="chó">Chó</option>
+        <option value="mèo">Mèo</option>
+        <option value="hamster">Hamster</option>
+      </select>
+
+      <select id="filterLocation">
+        <option value="">Toàn quốc</option>
+        <option value="Đà Nẵng">Đà Nẵng</option>
+        <option value="HCM">HCM</option>
+        <option value="Hà Nội">Hà Nội</option>
+      </select>
+
+      <select id="sortBy">
+        <option value="latest">Mới nhất</option>
+        <option value="priceAsc">Giá thấp → cao</option>
+        <option value="priceDesc">Giá cao → thấp</option>
+      </select>
+    </div>
+
+    <button id="clearFilters">Xóa bộ lọc</button>
+  </div>
+
+  <section id="grid" class="product-grid">
+    <!-- Sản phẩm thêm bằng JS -->
+  </section>
+
+  <button id="loadMore">Tải thêm</button>
+
+  <footer>
+    120 Hoàng Minh Thảo, Hòa Khánh Nam, Liên Chiểu, Đà Nẵng — (0236)3.772.579 <br>
+    © webbanpetnhom2
+  </footer>
+</main>
+
+<script>
+// SAMPLE DATA
+const sampleProducts = [
+  { id:1, title:"Chó Phốc Sóc", type:"chó", price:1200000, location:"Đà Nẵng", img:"https://via.placeholder.com/640x400?text=Cho" },
+  { id:2, title:"Mèo Anh Lông Ngắn", type:"mèo", price:900000, location:"Hà Nội", img:"https://via.placeholder.com/640x400?text=Meo" },
+  { id:3, title:"Hamster", type:"hamster", price:150000, location:"Đà Nẵng", img:"https://via.placeholder.com/640x400?text=Hamster" },
+  { id:4, title:"Chó Phú Quốc", type:"chó", price:2000000, location:"HCM", img:"https://via.placeholder.com/640x400?text=Cho" }
+];
+
+let page=0, perPage=6;
+
+function renderProducts(reset=false){
+  const grid=document.getElementById("grid");
+  if(reset) grid.innerHTML="";
+
+  const start=page*perPage;
+  const slice=sampleProducts.slice(start,start+perPage);
+
+  slice.forEach(p=>{
+    const card=`
+      <div class="card">
+        <div class="media">
+          <img src="${p.img}">
+          <div class="tag-top">THÔNG TIN THÚ CƯNG</div>
+          <div class="badge-price">${p.price.toLocaleString()}₫</div>
+          <div class="badge-location">${p.location}</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <h3 class="title">${p.title}</h3>
+            <div class="meta">Loại: ${p.type}</div>
+          </div>
+          <div class="actions">
+            <button>Xem</button>
+            <button class="ghost">Liên hệ</button>
+          </div>
+        </div>
+      </div>
+    `;
+    grid.innerHTML+=card;
+  });
+
+  page++;
+}
+
+document.getElementById("loadMore").onclick=()=>renderProducts();
+renderProducts();
+</script>
+
+</body>
+</html>
