@@ -1,0 +1,103 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #ff914d;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li a {
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid white;
+}
+
+/* BANNER */
+.banner {
+  text-align: center;
+  padding: 60px 20px;
+  background: url('images/banner.jpg') center/cover no-repeat;
+  color: white;
+  background-color: #333; /* fallback khi không có ảnh */
+}
+
+.banner h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 18px;
+}
+
+/* SERVICE GRID */
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.service-card p {
+  padding: 0 15px 20px;
+  color: #555;
+}
+
+/* Hover */
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ff914d;
+  color: white;
+  margin-top: 30px;
+}
