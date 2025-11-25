@@ -5,10 +5,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Bảng tạm lưu lịch đặt (RAM, xóa khi restart server)
 const bookings = [];
 
-// API Đặt lịch dịch vụ (POST)
+
 app.post('/booking', (req, res) => {
   const { service, name, phone, date, note } = req.body;
   if (!service || !name || !phone || !date) {
@@ -19,9 +18,9 @@ app.post('/booking', (req, res) => {
   return res.status(201).json({ success: true, booking });
 });
 
-// API xem tất cả lịch đã đặt (GET)
+
 app.get('/booking', (req, res) => {
-  // Hiện lịch mới nhất lên trên
+
   return res.json(bookings.slice().reverse());
 });
 

@@ -1,4 +1,3 @@
-// Dữ liệu dịch vụ mẫu
 const serviceDetails = {
   1: {
     title: "Tắm rửa thú cưng",
@@ -51,7 +50,7 @@ const modalPrice = document.getElementById('modal-price');
 const closeBtn = document.querySelector('.close-btn');
 const bookingForm = document.getElementById('booking-form');
 
-let currentService = null; // Lưu dịch vụ hiện tại
+let currentService = null;
 
 function openModal(id) {
   const detail = serviceDetails[id];
@@ -67,12 +66,10 @@ function openModal(id) {
   });
   modalPrice.textContent = detail.price;
   
-  // Reset form
   bookingForm.reset();
   modal.style.display = 'flex';
 }
 
-// Đóng modal khi click nút đóng hoặc click ra ngoài modal
 closeBtn.onclick = function() {
   modal.style.display = 'none';
 };
@@ -82,7 +79,6 @@ window.onclick = function(event) {
   }
 };
 
-// Click vào từng card dịch vụ
 cards.forEach(card => {
   card.addEventListener('click', function() {
     const id = this.getAttribute('data-id');
@@ -90,10 +86,9 @@ cards.forEach(card => {
   });
 });
 
-// Xử lý đặt lịch
 bookingForm.onsubmit = function(e) {
   e.preventDefault();
-  // Lấy dữ liệu
+
   const name = document.getElementById('customer-name').value.trim();
   const phone = document.getElementById('customer-phone').value.trim();
   const date = document.getElementById('booking-date').value;
@@ -104,19 +99,10 @@ bookingForm.onsubmit = function(e) {
     return;
   }
   
-  // Có thể gửi dữ liệu đặt lịch lên server tại đây
   alert(
     `Đặt lịch thành công!\n\nDịch vụ: ${currentService}\nTên KH: ${name}\nSĐT: ${phone}\nNgày: ${date}\nGhi chú: ${note||"Không có"}`
   );
 
   modal.style.display = 'none';
 };
-// Gửi dữ liệu đặt lịch lên server
-fetch('http://localhost:3001/booking', {
-  method: 'POST',
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    service: currentService,
-    name, phone, date, note
-  })
-})
+
