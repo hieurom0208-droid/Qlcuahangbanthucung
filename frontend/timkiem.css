@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+}
+
+.logo {
+    background: #4a90e2;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+nav {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+nav a.active {
+    background: #bcd1f3;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.login-btn {
+    padding: 8px 15px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+}
+
+/* Main content */
+main {
+    padding: 30px 60px;
+}
+
+.search-box {
+    display: flex;
+    width: 60%;
+    margin: 20px 0;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #777;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-btn {
+    width: 50px;
+    border: 1px solid #777;
+    background: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.suggestions p {
+    color: #555;
+    margin: 8px 0;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 25px;        
+    box-sizing: border-box;    
+    z-index: 9999;            
+
+    overflow: visible !important; /* NGĂN cắt icon */
+}
+
+
+.footer-left p {
+    margin: 3px 0;
+}
+
+.footer-right img {
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    display: inline-block;
+}
