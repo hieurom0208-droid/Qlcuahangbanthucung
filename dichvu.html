@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dịch vụ thú cưng</title>
+  <link rel="stylesheet" href="dichvu.css" />
+</head>
+<!-- Popup modal dịch vụ -->
+<div id="service-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 id="modal-title"></h2>
+    <ul id="modal-steps"></ul>
+    <p><strong>Giá dịch vụ:</strong> <span id="modal-price"></span></p>
+    <form id="booking-form">
+      <label>
+        Tên khách hàng:
+        <input type="text" id="customer-name" required>
+      </label><br/>
+      <label>
+        Số điện thoại:
+        <input type="tel" id="customer-phone" required pattern="0[0-9]{9,10}">
+      </label><br/>
+      <label>
+        Ngày đặt lịch:
+        <input type="date" id="booking-date" required>
+      </label><br/>
+      <label>
+        Ghi chú:
+        <textarea id="customer-note" rows="2"></textarea>
+      </label><br/>
+      <button type="submit" id="book-btn">Xác nhận đặt lịch</button>
+    </form>
+  </div>
+</div>
+
+<body>
+
+<header>
+  <div class="logo">Pet Shop</div>
+  <nav>
+    <ul>
+      <li><a href="trangchu.html">Trang chủ</a></li>
+      <li><a href="dichvu.html" class="active">Dịch vụ</a></li>
+      <li><a href="sanpham.html">Sản phẩm</a></li>
+      <li><a href="dangtinn.html">Đăng tin</a></li>
+      <li><a href="timkiem.html">Tìm kiếm</a></li>
+      <li><a href="dangnhap.html">Đăng Nhập</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner">
+  <h1>Dịch vụ tại Pet Shop</h1>
+  <p>Chăm sóc thú cưng chuyên nghiệp, an toàn và tận tâm</p>
+</section>
+
+<main class="service-container">
+
+  <div class="service-card" data-id="1">
+    <img src="tamrua.jpg" alt="Tắm rửa thú cưng">
+    <h3>Tắm rửa thú cưng</h3>
+    <p>Dịch vụ tắm, sấy, vệ sinh tai và cắt móng.</p>
+  </div>
+
+  <div class="service-card" data-id="2">
+    <img src="cattia.jpg" alt="Cắt tỉa lông">
+    <h3>Cắt tỉa lông</h3>
+    <p>Styling theo từng giống loài và yêu cầu riêng.</p>
+  </div>
+
+  <div class="service-card" data-id="3">
+    <img src="khamsuckhoe.jpg" alt="Khám sức khỏe">
+    <h3>Khám sức khỏe</h3>
+    <p>Kiểm tra định kỳ, phát hiện sớm bệnh lý.</p>
+  </div>
+
+  <div class="service-card" data-id="4">
+    <img src="khachsanthucung.jpg" alt="Khách sạn thú cưng">
+    <h3>Khách sạn thú cưng</h3>
+    <p>Chỗ ở rộng rãi, sạch sẽ, có người chăm 24/7.</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Pet Shop.</p>
+</footer>
+
+<script src="dichvu.js"></script>
+
+</body>
+</html>

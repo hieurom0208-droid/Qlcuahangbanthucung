@@ -1,0 +1,228 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #ff914d;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li a {
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid white;
+}
+
+/* BANNER */
+.banner {
+  text-align: center;
+  padding: 60px 20px;
+  background: url('images/banner.jpg') center/cover no-repeat;
+  color: white;
+  background-color: #333; /* fallback khi không có ảnh */
+}
+
+.banner h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 18px;
+}
+
+/* SERVICE GRID */
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.service-card p {
+  padding: 0 15px 20px;
+  color: #555;
+}
+
+/* Hover */
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ff914d;
+  color: white;
+  margin-top: 30px;
+}
+/* Modal Overlay */
+.modal {
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(60, 70, 100, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+/* Modal Content */
+.modal-content {
+  background: linear-gradient(135deg, #fffbe8 68%, #ffe9d1 100%);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(255,145,77,0.23);
+  padding: 32px 26px 18px 26px;
+  min-width: 330px;
+  max-width: 95vw;
+  position: relative;
+  animation: modalShow 0.32s cubic-bezier(.47,1.64,.41,.8);
+}
+
+@keyframes modalShow {
+  0%   { transform: scale(0.76) translateY(40px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  right: 16px; top: 14px;
+  font-size: 26px;
+  color: #ff914d;
+  background: #fff5ee;
+  border-radius: 50%;
+  padding: 2px 10px;
+  cursor: pointer;
+  transition: background 0.19s;
+}
+.close-btn:hover {
+  background: #ffe1ca;
+}
+
+/* Tiêu đề popup */
+#modal-title {
+  margin-bottom: 8px;
+  font-size: 1.20rem;
+  font-weight: bold;
+  color: #ff914d;
+  text-align: center;
+  letter-spacing: 0.7px;
+}
+
+/* Bước dịch vụ */
+#modal-steps {
+  margin: 17px 0 10px;
+  padding-left: 22px;
+}
+#modal-steps li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #714500;
+  position: relative;
+}
+#modal-steps li::before {
+  content: "🐾";
+  position: absolute;
+  left: -22px;
+  top: 1px;
+  font-size: 1rem;
+}
+
+/* Giá */
+#modal-price {
+  color: #ff914d;
+  font-weight: bold;
+  font-size: 1.08rem;
+}
+
+/* Nâng cấp form đặt lịch */
+#booking-form label {
+  color: #715500;
+  font-weight: 500;
+  font-size: 0.99rem;
+}
+
+#booking-form input,
+#booking-form textarea {
+  width: 99%;
+  margin: 3px 0 15px 0;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1.3px solid #ffe1ca;
+  background: #fffdfa;
+  font-size: 1rem;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 1px 5px #ff914d19;
+}
+#booking-form input:focus,
+#booking-form textarea:focus {
+  border-color: #ff914d;
+  outline: none;
+}
+
+/* Nút đặt lịch */
+#book-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #ff914d 85%, #ffb56a 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.08rem;
+  border: none;
+  border-radius: 9px;
+  padding: 11px;
+  margin-top: 4px;
+  cursor: pointer;
+  box-shadow: 0 3px 12px #ff914d25;
+  transition: background 0.22s, box-shadow 0.22s;
+}
+#book-btn:hover {
+  background: linear-gradient(90deg, #e67323 80%, #ffd29c 100%);
+  box-shadow: 0 6px 16px #ff914d30;
+}
