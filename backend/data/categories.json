@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Chó",
+      "slug": "cho",
+      "icon": "🐕",
+      "description": "Các giống chó cưng đáng yêu, trung thành"
+    },
+    {
+      "name": "Mèo",
+      "slug": "meo",
+      "icon": "🐱",
+      "description": "Các giống mèo cưng xinh xắn, dễ thương"
+    },
+    {
+      "name": "Cá",
+      "slug": "ca",
+      "icon": "🐠",
+      "description": "Cá cảnh đẹp, trang trí nhà cửa"
+    },
+    {
+      "name": "Chim",
+      "slug": "chim",
+      "icon": "🐦",
+      "description": "Các loại chim cảnh dễ thương, hót hay"
+    },
+    {
+      "name": "Thú cưng khác",
+      "slug": "thu-cung-khac",
+      "icon": "🐾",
+      "description": "Các loại thú cưng độc đáo, thú vị"
+    }
+  ]
