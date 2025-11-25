@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+
+  <title>Web Bán Pet – Sản phẩm</title>
+</head>
+<body>
+
+<div class="topbar">
+  <div>WEB BÁN PET</div>
+  <div class="url">https://www.webbanpet.com</div>
+</div>
+
+<header>
+  <div class="logo">
+    <div class="badge">LOGO</div>
+    <div>
+      <div style="font-weight:700">WebBanPet</div>
+      <div style="font-size:12px;color:#777">Chợ thú cưng online</div>
+    </div>
+  </div>
+
+  <div class="search">
+    <input id="searchInput" type="search" placeholder="Tìm kiếm trên Chợ Pet?...">
+  </div>
+
+  <nav class="nav-actions">
+    <button>Tin tức</button>
+    <button>Đăng tin</button>
+    <button class="primary">Đăng nhập</button>
+  </nav>
+</header>
+
+<main>
+  <div class="controls">
+    <div class="left">
+      <select id="filterType">
+        <option value="">Tất cả loại</option>
+        <option value="chó">Chó</option>
+        <option value="mèo">Mèo</option>
+        <option value="hamster">Hamster</option>
+      </select>
+
+      <select id="filterLocation">
+        <option value="">Toàn quốc</option>
+        <option value="Đà Nẵng">Đà Nẵng</option>
+        <option value="HCM">HCM</option>
+        <option value="Hà Nội">Hà Nội</option>
+      </select>
+
+      <select id="sortBy">
+        <option value="latest">Mới nhất</option>
+        <option value="priceAsc">Giá thấp → cao</option>
+        <option value="priceDesc">Giá cao → thấp</option>
+      </select>
+    </div>
+
+    <button id="clearFilters">Xóa bộ lọc</button>
+  </div>
+
+  <section id="grid" class="product-grid">
+    <!-- JS sẽ render vào đây -->
+  </section>
+
+  <button id="loadMore">Tải thêm</button>
+
+  <footer>
+    120 Hoàng Minh Thảo, Hòa Khánh Nam, Liên Chiểu, Đà Nẵng — (0236)3.772.579 <br>
+    © webbanpetnhom2
+  </footer>
+</main>
+
+</body>
+</html>
