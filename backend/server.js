@@ -185,7 +185,7 @@ const seedDataHandler = async (req, res) => {
 
     const services = await Service.insertMany(servicesData);
     console.log(`  ✓ Created ${services.length} services`);
-    console.log('🎉 Seed process completed successfully!');
+    console.log('Seed process completed successfully!');
 
     // Response based on request method
     if (req.method === 'GET') {
@@ -365,10 +365,5 @@ app.listen(PORT, () => {
    1. Health: http://localhost:${PORT}/api/health
    2. Seed:   http://localhost:${PORT}/api/seed
    3. Test:   http://localhost:${PORT}/api/categories
-
-⚠️  Troubleshooting:
-   - Ensure MongoDB is running on localhost:27017
-   - Check .env file for MONGODB_URI
-   - Wait for "MongoDB connected" message above
 `);
 });
