@@ -1,0 +1,26 @@
+[
+    {
+      "title": "Mua bán thú cưng",
+      "icon": "🐾",
+      "description": "Mua bán các loại thú cưng uy tín, đảm bảo sức khỏe tốt",
+      "link": "/pets"
+    },
+    {
+      "title": "Phối giống cho thú",
+      "icon": "💕",
+      "description": "Dịch vụ phối giống chuyên nghiệp, chất lượng cao",
+      "link": "/breeding"
+    },
+    {
+      "title": "Sự kiện khuyến mãi",
+      "icon": "🎉",
+      "description": "Các chương trình khuyến mãi hấp dẫn, giảm giá sốc hàng tháng",
+      "link": "/promotions"
+    },
+    {
+      "title": "Cẩm nang thú cưng",
+      "icon": "📚",
+      "description": "Kiến thức chăm sóc thú cưng từ A-Z, hướng dẫn chi tiết",
+      "link": "/guide"
+    }
+  ]
