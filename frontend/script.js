@@ -27,7 +27,7 @@ if (registerForm) {
 
             if (data.success) {
                 showMessage(message, data.message || 'Đăng ký thành công!', 'success');
-                setTimeout(() => { window.location.href = 'index.html'; }, 2000);
+                setTimeout(() => { window.location.href = 'dangnhap.html'; }, 2000);
             } else {
                 showMessage(message, data.message, 'error');
             }
